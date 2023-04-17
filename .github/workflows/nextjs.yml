@@ -30,6 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set environment variable
+        run: |
+          echo ${{ secrets.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN }}
+          echo ${{ secrets.NEXT_PUBLIC_CONTENTFUL_SPACE_ID }}
         env:
           NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN }}
           NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ secrets.NEXT_PUBLIC_CONTENTFUL_SPACE_ID }}
