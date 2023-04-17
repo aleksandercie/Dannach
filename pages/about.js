@@ -9,8 +9,8 @@ const CONTENTFUL_ACCESS_TOKEN = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
 export default function About({ about, footer, navigation }) {
   const { main, secondary, info, image } = about;
 
-  const renderParagraph = [main, secondary, info].map((paragraph) => (
-    <Paragraph paragraph={paragraph} />
+  const renderParagraph = [main, secondary, info].map((paragraph, index) => (
+    <Paragraph key={index} paragraph={paragraph} />
   ));
 
   return (
