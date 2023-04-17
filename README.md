@@ -10,3 +10,5 @@ Project is created with:
 * Radix
 * Tailwind
 * Framer motion
+* Grapql
+* Contentful
